@@ -12,5 +12,5 @@ public abstract class FlockBehavior : MonoBehaviour
     }
 
     public abstract Vector3 GetForce(); // Returns a vector representing the force of this behavior
-    public abstract void Update(Vector3 position); // Updates the neighbors array and calculates the force for this behavior
+    public abstract void Updates(Vector3 position); // Updates the neighbors array and calculates the force for this behavior
 }

@@ -25,9 +25,9 @@ public class FlockEntity : MonoBehaviour
     void FixedUpdate()
     {
         // Update each flock behavior
-        cohesion.Update(transform.position);
-        separation.Update(transform.position);
-        alignment.Update(transform.position);
+        cohesion.Updates(transform.position);
+        separation.Updates(transform.position);
+        alignment.Updates(transform.position);
 
         // Combine the forces to get a new velocity
         Vector3 newVelocity = cohesion.GetForce() + separation.GetForce() + alignment.GetForce();

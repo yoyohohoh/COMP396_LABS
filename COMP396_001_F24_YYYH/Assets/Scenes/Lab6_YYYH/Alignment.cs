@@ -31,7 +31,7 @@ public class Alignment : FlockBehavior
         return (averageVelocity - transform.position).normalized * alignmentStrength;
     }
 
-public override void Update(Vector3 position)
+public override void Updates(Vector3 position)
     { 
 // Find nearby entities within a certain radius
 float radius = 10f;
