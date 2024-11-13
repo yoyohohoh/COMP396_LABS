@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Graph : MonoBehaviour
+public class Graph
 {
     Dictionary<char, Dictionary<char, int>> vertices = new Dictionary<char, Dictionary<char, int>>();
 
@@ -73,7 +73,7 @@ public class Graph : MonoBehaviour
 
     public List<char> DFS(char start)
     {
-        List<char> visited = new List<char>();
+        List<char> visited = new List<char>(); // You could use a HashSet<char> for better performance
         Stack<char> stack = new Stack<char>();
         stack.Push(start);
 
@@ -81,12 +81,13 @@ public class Graph : MonoBehaviour
         {
             char vertex = stack.Pop();
 
-            if (!visited.Contains(vertex))
+            if (!visited.Contains(vertex)) // List-based check, could optimize with HashSet
             {
                 visited.Add(vertex);
 
                 if (vertices.ContainsKey(vertex))
                 {
+                    // Loop through neighbors and add unvisited ones to the stack
                     foreach (var neighbor in vertices[vertex].Keys)
                     {
                         if (!visited.Contains(neighbor))
@@ -100,4 +101,5 @@ public class Graph : MonoBehaviour
 
         return visited;
     }
+
 }
