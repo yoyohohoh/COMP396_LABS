@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Lab11_YYYH/Lab11_PathFinding_YYYH.unity
+    guid: 895e383fe6f0dba4aa5789765b4ea4ee
   m_configObjects: {}
